@@ -1,6 +1,6 @@
 Here's a clean and informative `README.md` you can use for your project:
 
-````markdown
+
 # Gaana AI Takehome
 
 This project consists of a **Next.js** frontend and a **json-server** backend mock API for managing sea port data.
@@ -11,10 +11,10 @@ This project consists of a **Next.js** frontend and a **json-server** backend mo
 
 ### 1. Install Dependencies
 
-```bash
+```
 npm install
 ```
-````
+
 
 ---
 
@@ -22,7 +22,7 @@ npm install
 
 ### Start the JSON Server (Mock API)
 
-```bash
+```
 npm run start-server
 ```
 
@@ -34,7 +34,7 @@ npm run start-server
 
 ### Build the Next.js App
 
-```bash
+```
 npm run build
 ```
 
@@ -44,7 +44,7 @@ npm run build
 
 ### Start the Next.js App (Production Mode)
 
-```bash
+```
 npm start
 ```
 
@@ -55,7 +55,7 @@ npm start
 
 ### Start in Development Mode
 
-```bash
+```
 npm run dev
 ```
 
