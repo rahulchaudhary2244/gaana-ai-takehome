@@ -5,6 +5,13 @@ Here's a clean and informative `README.md` you can use for your project:
 
 This project consists of a **Next.js** frontend and a **json-server** backend mock API for managing sea port data.
 
+## 📦 Clone the Repository
+
+```
+git clone https://github.com/rahulchaudhary2244/gaana-ai-takehome.git
+cd gaana-ai-takehome
+```
+
 ---
 
 ## 🛠️ Getting Started
