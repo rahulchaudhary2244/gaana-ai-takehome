@@ -2,7 +2,7 @@
 
 import { LocationData, LocationResponse } from "./types";
 
-const URL = process.env.SEA_PORTS_URL ?? "http://localhost:4000/sea-ports";
+const URL = "http://localhost:4000/sea-ports";
 
 export const getSeaPorts = async ({
     _page,
