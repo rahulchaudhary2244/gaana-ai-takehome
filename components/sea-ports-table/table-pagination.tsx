@@ -36,7 +36,7 @@ export const TablePagination = ({ first, last, next, prev }: Props) => {
     };
 
     return (
-        <div className="flex gap-2 flex-wrap mt-4">
+        <div className="flex gap-2 flex-wrap mt-4 justify-center">
             <Button
                 variant="outline"
                 onClick={handleFirst}
