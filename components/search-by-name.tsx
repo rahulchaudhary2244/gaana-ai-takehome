@@ -1,6 +1,5 @@
 "use client";
 
-import { Input } from "@/components/ui/input";
 import { useEffect, useState, useRef } from "react";
 import { useUpdateSearchParams } from "@/hooks/use-update-search-params";
 import { useDebounce } from "@/hooks/use-debounce";

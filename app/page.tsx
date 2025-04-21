@@ -18,7 +18,7 @@ type Props = {
     searchParams: SearchParams;
 };
 
-export const searchParamsSchema = z.object({
+const searchParamsSchema = z.object({
     _sort: z.string().optional().default(""),
     _order: z.string().optional().default(""),
     _per_page: z.coerce.number().optional().default(10),

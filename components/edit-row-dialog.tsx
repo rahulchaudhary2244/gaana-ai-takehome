@@ -9,13 +9,13 @@ import {
     AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
 import { LocationData } from "./sea-ports-table/types";
-import { ReactNode, useState } from "react";
 import { updateSeaPortInfo } from "./sea-ports-table/server-actions";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
 import { SeaPortForm } from "./sea-port-form";
 import { Pencil } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useState } from "react";
 
 type Props = {
     data: LocationData;
