@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Here's a clean and informative `README.md` you can use for your project:
 
-## Getting Started
+````markdown
+# Gaana AI Takehome
 
-First, run the development server:
+This project consists of a **Next.js** frontend and a **json-server** backend mock API for managing sea port data.
+
+---
+
+## 🛠️ Getting Started
+
+### 1. Install Dependencies
+
+```bash
+npm install
+```
+````
+
+---
+
+## 🚀 Scripts
+
+### Start the JSON Server (Mock API)
+
+```bash
+npm run start-server
+```
+
+-   Runs `json-server` at **[http://localhost:4000](http://localhost:4000)**
+-   Endpoint for sea ports: **[http://localhost:4000/sea-ports](http://localhost:4000/sea-ports)**
+-   ⚠️ Make sure port `4000` is not already in use.
+
+---
+
+### Build the Next.js App
+
+```bash
+npm run build
+```
+
+-   Prepares the Next.js app for production.
+
+---
+
+### Start the Next.js App (Production Mode)
+
+```bash
+npm start
+```
+
+-   Runs the app at **[http://localhost:3000](http://localhost:3000)**
+-   ⚠️ Make sure port `3000` is not already in use.
+
+---
+
+### Start in Development Mode
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+-   Launches the Next.js UI in development mode at **[http://localhost:3000](http://localhost:3000)**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📁 Available URLs
 
-## Learn More
+-   **Frontend (Next.js UI):** [http://localhost:3000](http://localhost:3000)
+-   **Backend (json-server API):** [http://localhost:4000/sea-ports](http://localhost:4000/sea-ports)
 
-To learn more about Next.js, take a look at the following resources:
+---
 
--   [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
--   [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📝 Notes
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+-   Ensure both ports `3000` (for Next.js) and `4000` (for json-server) are free before running.
+-   This mock API is powered by [`json-server`](https://github.com/typicode/json-server).
