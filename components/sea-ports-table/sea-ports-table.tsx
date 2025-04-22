@@ -1,7 +1,6 @@
 "use client";
 
 import { getCoreRowModel, useReactTable } from "@tanstack/react-table";
-
 import { getColumns } from "./columns";
 import { LocationData, LocationResponse } from "./types";
 import { ColumnVisibilityToggles } from "./column-visibility-toggles";

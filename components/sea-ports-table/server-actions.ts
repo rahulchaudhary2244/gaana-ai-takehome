@@ -3,7 +3,7 @@
 import { revalidatePath } from "next/cache";
 import { LocationData, LocationResponse } from "./types";
 
-const URL = "http://localhost:4000/sea-ports";
+const URL = process.env.SEA_PORTS_ENDPOINT ?? "http://localhost:4000/sea-ports";
 
 export const getSeaPorts = async ({
     _page,

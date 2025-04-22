@@ -1,6 +1,5 @@
 import { ColumnDef } from "@tanstack/react-table";
 import { LocationData, LocationResponse } from "./types";
-
 import { DeleteRowDialog } from "../delete-row-dialog";
 import { EditRowDialog } from "../edit-row-dialog";
 import { SortedColumn } from "./sorted-column";
