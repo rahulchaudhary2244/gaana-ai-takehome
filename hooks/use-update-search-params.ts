@@ -17,6 +17,6 @@ export function useUpdateSearchParams() {
             }
         }
 
-        router.push(`?${params.toString()}`);
+        router.push(`?${params.toString()}`, { scroll: false });
     };
 }

@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/alert-dialog";
 import { LocationData, LocationResponse } from "./sea-ports-table/types";
 import { useState } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { deleteSeaPortInfo } from "./sea-ports-table/server-actions";
@@ -27,7 +27,6 @@ export const DeleteRowDialog = ({
     prev,
 }: Props) => {
     const [open, setOpen] = useState(false);
-    const router = useRouter();
 
     const searchParams = useSearchParams();
     const updateParam = useUpdateSearchParams();
@@ -43,8 +42,6 @@ export const DeleteRowDialog = ({
         setOpen(false);
         if (currentPage === last && perPageDataCount === 1 && prev) {
             updateParam({ _page: prev });
-        } else {
-            router.refresh();
         }
         toast.success("Deleted successfully");
     };

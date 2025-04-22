@@ -1,5 +1,6 @@
 "use server";
 
+import { revalidatePath } from "next/cache";
 import { LocationData, LocationResponse } from "./types";
 
 const URL = "http://localhost:4000/sea-ports";
@@ -39,6 +40,7 @@ export const updateSeaPortInfo = async (data: LocationData) => {
             },
             body: JSON.stringify(data),
         });
+        revalidatePath("/");
         return { success: true };
     } catch {
         return { success: false };
@@ -58,7 +60,7 @@ export const addSeaPortInfo = async (data: LocationData) => {
             },
             body: JSON.stringify(data),
         });
-
+        revalidatePath("/");
         return { success: true };
     } catch {
         return { success: false };
@@ -73,7 +75,7 @@ export const deleteSeaPortInfo = async ({ id }: Pick<LocationData, "id">) => {
                 "Content-Type": "application/json",
             },
         });
-
+        revalidatePath("/");
         return { success: true };
     } catch {
         return { success: false };
