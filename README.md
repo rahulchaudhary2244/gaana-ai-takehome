@@ -3,6 +3,7 @@ Vercel deployed link - https://gaana-ai-takehome.vercel.app/
 Render link for backend - https://json-server-80i8.onrender.com/sea-ports
 
 # Gaana AI Takehome
+![image](https://github.com/user-attachments/assets/16871b65-583e-4d94-abf8-8c0897846851)
 
 This project consists of a **Next.js** frontend and a **json-server** backend mock API for managing sea port data.
 
