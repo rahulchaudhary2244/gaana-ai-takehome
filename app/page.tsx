@@ -1,10 +1,7 @@
-import { SeaPortsTable } from "@/components/sea-ports-table/sea-ports-table";
-import { getSeaPorts } from "@/components/sea-ports-table/server-actions";
-import { TablePagination } from "@/components/sea-ports-table/table-pagination";
-import { AddSeaPortDialog } from "@/components/add-sea-port-dialog";
-import { If } from "@/components/if";
-import { SearchByName } from "@/components/search-by-name";
 import { z } from "zod";
+import { HomePage } from "@/components/home-page";
+import { Suspense } from "react";
+import { TableSkeleton } from "@/components/skeletons/table-skeleton";
 
 type SearchParams = {
     _page: string;
@@ -31,37 +28,15 @@ export default async function Page({ searchParams }: Props) {
 
     const { _page, _per_page, _sort, name, _order } = parsed;
 
-    const { data, first, last, next, prev, items } = await getSeaPorts({
-        _page: Number(_page),
-        _per_page: Number(_per_page),
-        _order,
-        _sort,
-        name,
-    });
-
     return (
-        <div>
-            <div className="flex gap-2">
-                <SearchByName />
-                <AddSeaPortDialog />
-            </div>
-            <If condition={items < 1}>
-                <div className="mt-4">No data found</div>
-            </If>
-            <If condition={items > 0}>
-                <SeaPortsTable
-                    data={data}
-                    last={last}
-                    perPageDataCount={data.length}
-                    prev={prev}
-                />
-                <TablePagination
-                    first={first}
-                    last={last}
-                    prev={prev}
-                    next={next}
-                />
-            </If>
-        </div>
+        <Suspense fallback={<TableSkeleton />}>
+            <HomePage
+                _page={_page}
+                _per_page={_per_page}
+                _sort={_sort}
+                name={name}
+                _order={_order}
+            />
+        </Suspense>
     );
 }
