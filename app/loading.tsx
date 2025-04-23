@@ -1,5 +1,5 @@
-import { TableSkeleton } from "@/components/skeletons/table-skeleton";
+import { HomePageSkeleton } from "@/components/skeletons/home-page-skeleton";
 
 export default function Loading() {
-    return <TableSkeleton />;
+    return <HomePageSkeleton />;
 }
